@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 15. Portfolio de imágenes mediante rejilla</title>
+
+    <style>
+        div.portfolio {
+            display: grid;
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 20px;
+        }
+
+        div.portfolio-item {
+            background-color: red;
+            color: #c4c4c4;
+            font-weight: 700;
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.medium {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        div.small {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+
+        div.large {
+            grid-row: span 3;
+            grid-column: span 3;
+        }
+
+        div.tall {
+            grid-row: span 3;
+            grid-column: span 2;
+        }
+
+        div.wide {
+            grid-row: span 2;
+            grid-column: span 3;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1>Práctica 15. Portfolio de imágenes mediante rejilla</h1>
+    <div class="portfolio">
+        <div class="portfolio-item medium">medio</div>
+        <div class="portfolio-item large">grande</div>
+        <div class="portfolio-item medium">medio</div>
+        <div class="portfolio-item small">pequeño</div>
+        <div class="portfolio-item tall">alto</div>
+        <div class="portfolio-item wide">ancho</div>
+        <div class="portfolio-item wide">ancho</div>
+        <div class="portfolio-item medium">medio</div>
+    </div>
+
+
+
+
+</body>
+
+</html>
