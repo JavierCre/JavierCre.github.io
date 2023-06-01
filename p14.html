@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 14. Sistema de rejilla</title>
+    <style>
+        div.g-common{border: 1px solid black; height: 200px;display: grid;}
+
+        div.g-uno{grid-template-columns: repeat(6,1fr) ;}
+  
+        div.i-red{background-color: red; grid-column: 2;}
+        div.i-yellow{background-color: yellow; grid-column: 3/span 2;}
+        div.i-purple{background-color: purple; grid-column: 6;}
+
+        div.g-dos{grid-template-rows: repeat(13,1fr) ;}
+        div.i-green{background-color: green; grid-row: 2/span 5;}
+        div.i-blue{background-color: blue; grid-row: 8/span 5;}
+        div.i-black{background-color: black; grid-row: 13;}
+
+    </style>
+</head>
+<body>
+    
+    <h1>Practica 14. Grid System</h1>
+    <p><strong>1. 6 columnas iguales:
+       <em>"patron: repeat(6,1fr), roja:2, amarilla: 3 - 5, purple: 6"</em></strong></p>
+  
+    <div class="g-common g-uno">
+      <div class="i-red"></div>
+      <div class="i-yellow"></div>
+      <div class="i-purple"></div>
+    </div>
+  
+    
+
+
+    <p><strong>2. 5 filas :
+       <em>"patron: 1fr 4fr 1fr 4fr 1fr, verde:2, azul: 4, negra: 5"</em></strong></p>
+    <div class="g-common g-dos">
+      <div class="i-green"></div>
+      <div class="i-blue"></div>
+      <div class="i-black"></div>
+    </div>
+  
+
+
+
+
+
+
+
+
+</body>
+</html>
