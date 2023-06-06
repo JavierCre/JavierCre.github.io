@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 10. Zebra Striped Table</title>
+<style>
+
+body {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    table {border-color: black;border-style: solid;border-width: 2px;width: 75%;border-collapse: collapse;}
+    tr,td{border: 1px solid black;padding: 10px;}
+    th{padding: 10px;text-align: left;border: 1px solid black;}
+    tr:nth-of-type(even){background-color: grey;}
+    td:nth-of-type(even):hover {
+        background-color: blue;
+    }
+
+</style>
+
+
+
+
+    
+</head>
+<body>
+    
+<h1>Práctica 10. Zebra Striped Table</h1>
+
+<table class="stripped">
+    <tr>
+        <th>Nombre</th>
+        <th>Voltaje(V)</th>
+        <th>Corriente(mA)</th>
+    </tr>
+    <tr>
+        <td>Diodo Led</td>
+        <td>3,3</td>
+        <td>20ma</td>
+    </tr>
+    <tr>
+        <td>Potenciometro</td>
+        <td>24v</td>
+        <td>100ma</td>
+    </tr>
+    <tr>
+        <td>Motor DC</td>
+        <td>12v</td>
+        <td>40ma</td>
+    </tr>
+    <tr>
+        <td>LDR</td>
+        <td>12v</td>
+        <td>100ma</td>
+    </tr>
+    <tr>
+        <td>Transistor NPN 2n2222</td>
+        <td>80v</td>
+        <td>100ma</td>
+    </tr>
+</table>  
+
+
+
+
+</body>
+</html>
