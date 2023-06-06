@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,700">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 17. Pseudo elementos :after :before</title>
+
+    <style>
+        body {
+            font-family: "Mukta Malar";
+        }
+
+        section {
+            box-shadow: 0px 0.5em 2em rgba(0, 0, 0, .3);
+            padding: 4vh;
+            margin: 0 auto;
+            margin-bottom: 3em;
+            background-color: white;
+            width: 80%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section h2 {
+            text-align: center;
+        }
+
+        /* Apartado 1 */
+        section.uno p.info::before {
+            content: '';
+            background: url(https://bit.ly/3aUnWgx);
+            width: 64px;
+            height: 64px;
+            float: left;
+            margin: 0 0.3em 0 0;
+        }
+
+        section.uno p.danger::before {
+            content: '';
+            background: url(https://bit.ly/35pJYqE);
+            width: 64px;
+            height: 64px;
+            float: left;
+            margin: 0 0.3em 0 0;
+        }
+
+        /* Apartado 2 */
+        section.dos span.quoted {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            font-style: italic;
+            margin: 1.2em;
+        }
+
+        section.dos span.quoted::before {
+            content: '"';
+            font-size: 2em;
+            color: #999;
+            margin: 0 6px 0 0
+        }
+
+        section.dos span.quoted::after {
+            content: '"';
+            font-size: 2em;
+            color: #999;
+            margin: 0 0 0 6px;
+        }
+
+        /* Apartado 3 */
+        section.tres a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        section.tres a::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: url(https://bit.ly/2KLhcav) no-repeat top left;
+            display: inline-block;
+            background-size: cover;
+        }
+
+        /* Apartado 4 */
+
+        section.cuatro p {
+            display: inline-block;
+            margin: 2em;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: 1px solid black;
+            padding: .5em;
+            cursor: crosshair;
+            position: relative;
+        }
+
+        section.cuatro p.cuatroA::before {
+            content: '';
+            height: 5px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(0.2);
+            transform-origin: left;
+            transition: transform ease-in-out 500ms;
+        }
+
+        section.cuatro p.cuatroA:hover::before {
+            content: '';
+            height: 5px;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            
+            transform: scaleX(1);
+
+
+        }
+        section.cuatro p.cuatroB::before {
+            content: '';
+            height: 5px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: scaleX(0.2);
+            transform-origin: right;
+            transition: transform ease-in-out 500ms;
+        }
+
+        section.cuatro p.cuatroB:hover::before {
+            content: '';
+            height: 5px;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            
+            transform: scaleX(1);
+
+
+        }
+        section.cuatro p.cuatroC::before {
+            content: '';
+            width: 5px;
+            height: 50%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: scaleY(0.1);
+            transform-origin: bottom;
+            transition: transform ease-in-out 500ms;
+        }
+
+        section.cuatro p.cuatroC:hover::before {
+            content: '';
+            width: 5px;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            
+            transform: scaleY(1);
+
+
+        }
+        section.cuatro p.cuatroD::before {
+            content: '';
+            width: 5px;
+            height: 50%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scaleY(0.2);
+            transform-origin: top;
+            transition: transform ease-in-out 500ms;
+        }
+
+        section.cuatro p.cuatroD:hover::before {
+            content: '';
+            width: 5px;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            
+            transform: scaleY(1);
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Practica 17. Pseudo elementos :before y :after</h1>
+
+    <section class="uno">
+        <h2>P1. Iconos</h2>
+        <p class="info">Información oficial del Ministerio de Sanidad dirigida
+            a los profesionales sanitarios y a la ciudadanía en relación a
+            recomendaciones sanitarias y de salud pública de interés general.</p>
+        <p class="danger">Queda prorrogado el estado de alarma hasta las
+            <strong>00:00</strong> horas del día
+            <strong>10 de mayo de 2020</strong>.
+        </p>
+    </section>
+
+    <section class="dos">
+        <h2>P2. Citaciones</h2>
+        <p>Confuncio</p>
+        <p><span class="quoted">Me lo contaron y lo olvidé; lo vi y lo entendí; lo hice y lo aprendí.</span></p>
+    </section>
+
+    <section class="tres">
+        <p>El Bus Universal en Serie (BUS) (en inglés: Universal Serial Bus),
+            más conocido por la sigla USB,
+            es un <a href="#">bus</a> de comunicaciones que sigue un estándar que define los cables, ...</p>
+        <p><strong>COVID-19</strong>​ (acrónimo del inglés coronavirus disease 2019),4​ también
+            conocida como <strong>enfermedad por coronavirus</strong>​ o, incorrectamente, como <strong>neumonía
+                por coronavirus</strong>,1​ es una enfermedad infecciosa causada por el virus <a href="">SARS-CoV-2</a>.
+        </p>
+    </section>
+
+    <section class="cuatro">
+        <p class="cuatroA">Top Left-Right</p>
+        <p class="cuatroB">Down Right-Left</p>
+        <p class="cuatroC">Left Down-Up</p>
+        <p class="cuatroD">Right Up-Down</p>
+    </section>
+</body>
+
+</html>
