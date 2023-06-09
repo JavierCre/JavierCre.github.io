@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href=" https://fonts.googleapis.com/css?family=Mukta+Malar:300,700">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 16. Grid-layout</title>
+    <style>
+        body{font-family: 'Mukta Malar';}
+
+        section{padding: 4vh;box-shadow: 0px .5em 2em rgba(0,0,0,.3);margin: 0 auto;margin-bottom: 3em;}
+
+        .card{margin: 1.5%;width: 30%;text-align: center;border: 1px solid black;}
+
+        .card img{max-width: 100%;}
+        .card p {margin: 0;padding: .5em;}
+
+        /*Apartado 1*/ 
+        .grid-layout-one .card{width: 100%;}
+        .grid-layout-one .grid-parent{display: grid; grid-template-columns: 1fr 1fr 1fr ;grid-gap: 1em;}
+        
+        
+        /*Apartado 2*/
+
+        .grid-layout-two{display: grid;grid-template-columns: 1fr 4fr 1fr;}
+        .grid-layout-two .title{grid-column: 1 / 4;}
+        .grid-layout-two footer{grid-column: 1 / 4;}
+
+
+        .sidebar{background:#4D7C8A ;color: white;padding: 1em;}
+
+        .main{background: #E4FDE1;color: #333;padding: 1em;}
+        .main .card {float: left;}
+        footer {background: #476A6F;color: white;padding: 1em;}
+
+    </style>
+</head>
+<body>
+    <section class="grid-layout-one">
+        <h1>Using CSS Grid</h1>
+        <div class="grid-parent">
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+        </div>
+      </section>
+    
+      <section class="grid-layout-two">
+        <h1 class="title">More Grid for layout</h1>
+        <div class="sidebar sidebar--left">
+          <p>Hello there! Come here my little friend. Don't be afraid. Don't worry, he'll be all right. What happened? Rest easy, son, you've had a busy day. You're fortunate you're still in one piece. Ben? Ben Kenobi! Boy, am I glad to see you! </p>
+        </div>
+        <div class="main">
+          <div class="card">
+            <img src="https://unsplash.it/300/200" alt="a placeholder">
+            <p>Oh, this little droid! I think he's searching for his former master...</p>
+          </div>
+          <p>I'm getting too old for this sort of thing. I can't get involved! I've got work to do! It's not that I like the Empire. I hate it! But there's nothing I can do about it right now. It's such a long way from here. That's your uncle talking.
+            Oh, God, my uncle. How am I ever going to explain this?I've never seen such devotion in a droid before...there seems to be no stopping him. He claims to be the property of an Obi-Wan Kenobi. Is he a relative of yours? Do you know who he's
+            talking about?</p>
+        </div>
+        <div class="sidebar sidebar--right">
+          <p>Hello there! Come here my little friend. Don't be afraid. Don't worry, he'll be all right. What happened? Rest easy, son, you've had a busy day. You're fortunate you're still in one piece. Ben? Ben Kenobi! Boy, am I glad to see you! </p>
+        </div>
+        <footer>
+          <p>But there's nothing I can do about it right now. It's such a long way from here. That's your uncle talking. </p>
+        </footer>
+      </section>
+</body>
+</html>
