@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practica 11. Barra de navegacion</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .content {
+      background-image: url(https://unsplash.it/1000/1000);
+      height: 200vh;
+      background-size: cover;
+      background-color: #333;
+      color: white;
+      background-blend-mode: multiply;
+      display: grid;
+      place-items: center;
+    }
+
+    header {
+      background: rgb(173, 162, 29);
+      width: 100%;
+      position: fixed;
+      text-align: center;
+      z-index: 999;
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px,5fr) 1fr;
+    }
+
+    .logo {
+      grid-column: 2 / span 1;
+    }
+
+    nav {
+      grid-column: 3 / span 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+
+    nav a {
+      color: #444;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: relative;
+ 
+    }
+
+    nav a:hover::before {
+      color: #000;transform: scaleX(1);
+    }
+    nav a::before{
+        content: '';
+            height: 5px;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            bottom: -0.75em;
+            left: 0;
+            transform: scaleX(0.1);
+            transform-origin: center;
+            transition: transform ease-in-out 500ms;
+            
+        position: absolute;
+    bottom: -0.75em;    left: 0;}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img class="logo" src="https://raw.githubusercontent.com/sorolla-eso/sorolla-eso.github.io/master/logo.png" width="64px" alt="">
+
+    <nav>
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Asignaturas</a></li>
+        <li><a href="">Secretaria</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="content">
+    <h2>El contenido aquí...</h2>
+  </div>
+</body>
+
+</html>
