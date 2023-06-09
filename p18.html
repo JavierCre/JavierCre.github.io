@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 18. Icono, máscara y marcapáginas</title>
+    <style>
+    body{color: #FFFFFB;text-align: center;font-weight: bold ;}
+    section{padding: 30vh 0;}
+    .one{background: #FFC145;}
+    .one__icon{width: 100px;height: 100px;background: rgba(0,0,0,0.3);color: rgba(0,0,0,0.3);font-size: 2em;margin: 0 auto;border-radius: 50%;display: grid;place-items: center;}
+    .two{background: #FF6B6C;}
+    .two__image{clip-path: polygon(0% 20%, 38% 24%, 60% 0%, 98% 21%, 87% 81%, 57% 48%,36% 91%);}
+    .three{background: #5B5F97;}
+    .box{font-family: 'Mr Dafoe';font-size: 1.2em;font-weight: normal;background-color: #FFF;border-radius: 7px;color: #BBB; width: 75%;margin: 0 auto;padding: 10px;position: relative;}
+    .ribbon{width: 0px;height: 35px;border: 15px solid #B13A22;border-bottom: 15px solid transparent;border-top-left-radius: 5px;border-bottom-right-radius: 5px;position: absolute;top: -5px;right: 5%;}
+    .ribbon:hover{transform: scaleY(1.5);transform-origin: top;transition: transform 0.2s;}
+
+
+
+    </style>
+</head>
+<body>
+    <section class="one">
+        <h1>Icon</h1>
+        <div class="one__icon">:)</div>
+      </section>
+    
+      <section class="two">
+        <h1>Clip images</h1>
+        <img class="two__image" src="https://pyxis.nymag.com/v1/imgs/b66/9a2/970f0613563c4f5225c73c2f0a220c9577-bill-murray.rsquare.w700.jpg" alt="fillmurray">
+      </section>
+    
+      <section class="three">
+        <h1>Bookmark</h1>
+        <div class="box">
+          <div class="ribbon"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ea at, nostrum ipsa necessitatibus ullam aliquam ut labore eos incidunt dolorum est. Veniam similique, rerum unde rem explicabo eveniet exercitationem.</p>
+          <p>Sed eius, error, itaque neque harum quia aliquam natus exercitationem. Est mollitia officiis tenetur debitis eligendi, cupiditate numquam assumenda dolore a nostrum facilis. Rem, nesciunt dolorem similique suscipit mollitia! Dolorum?</p>
+          <p>Rem maxime, tempora asperiores, obcaecati quisquam harum nemo distinctio, mollitia repudiandae temporibus odio! Nostrum rerum ea saepe necessitatibus fuga neque ab ipsa? Voluptatem deleniti expedita minus aut cum fuga veniam.</p>
+        </div>
+      </section>
+</body>
+</html>
