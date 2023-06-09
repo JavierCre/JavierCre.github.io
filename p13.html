@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Práctica 8. Inline and block elements</title>
+  <style>
+    .border {
+      border: 1px solid black;
+      padding: 5px;
+    }
+ 
+    .common div {
+      border: 1px solid black;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      margin-right: 10px;
+      padding: 10px;
+      text-align: center;
+      line-height: 50px;
+      display: inherit;
+    }
+ 
+    .block {
+      display: block;
+    }
+ 
+    .inline {
+      display: inline;
+    }
+ 
+    .inline-block {
+      display: inline-block;
+    }
+  </style>
+</head>
+ 
+<body>
+  <h1>Práctica 8. Block vs Inline</h1>
+  <p>Los elementos de un documento HTML, según su forma de mostrarse, se pueden clasificar en <em>inline</em> o <em>block</em></p>
+  <p>Los elementos de bloque(<em>block</em>) se muestran en una nueva linea y ocupan todo el ancho asignado</p>
+  <p>Los elementos <em>inline</em> NO se visualiza en una misma linea y ocupa el ancho necesario. </p>
+  <p><strong>Ejemplos inline:</strong></p>
+  <p><span class="border">&ltspan&gt</span> , <em class="border">&ltem&gt</em> , <strong class="border">&ltstrong&gt</strong> etc.. que como se ve, se muestran en la misma linea y ocupan únicamente el espacio necesario</p>
+ 
+  <p><strong>Ejemplos block:</strong></p>
+  <p class="border">Los párrafos son un ejemplo claro de elemento de bloque</p>
+  <h3 class="border">Encabezados H1-H6</h3>
+  <div class="border">Etiqueta div</div>
+  <ul class="border">
+    <li>Listas</li>
+    <li>Ordenadas y no ordenadas</li>
+  </ul>
+ 
+  <h2>Actividad</h2> Modifica la propiedad display para que el siguiente grupo de 10 elemnetos <em>div</em> se visualize según la cabecera.
+ 
+  <p><strong>10 div - block</strong></p>
+  <div class="common block">
+    <div>1</div>
+    <div>2</div>
+    <div>...</div>
+    <div>9</div>
+    <div>10</div>
+  </div>
+ 
+  <p><strong>10 div - inline</strong></p>
+  <div class="common inline">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+  </div>
+ 
+  <p><strong>10 div - inline-block</strong></p>
+  <div class="common inline-block">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+  </div>
+</body>
+</html>
