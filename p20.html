@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,700">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica 20. Trabajo final</title>
+    <title>Práctica</title>
+    <link rel="stylesheet" href="main.css">
+
+<style>
+ body {
+  margin: 0;
+  padding: 0;
+  background-color: lightsalmon;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 4fr; 
+  gap: 10px; 
+}
+
+header {
+  background: rgb(81, 79, 79);
+  color: white;
+  grid-column: 1 / span 2;
+}
+
+nav {
+  background-color: green;
+  grid-column: 1; 
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 5%;
+  width: 100%;
+}
+
+nav a:hover {
+  border: 4px solid green;
+  color: white;
+  width: 136.5px;
+}
+
+.main {
+  background-color: lightsalmon;
+  grid-column: 2;
+}
+
+.main p {
+  margin: 0;
+}
+h1{text-align: center;}
+h4{text-align: right;}
+a{border-bottom: 2px solid white;}
+</style>
+
+
 </head>
 <body>
-
     <div class="grid-layout">
-      <header>
-        <h1>Practicas HTML/CSS 2020</h1>
-        <p class="header__left-side"><strong>Javier Crespo</strong></p>
-        <p class="header__right-side"><strong>1BAC B</strong></p>
-      </header>
-      <nav>
-        <a href="p1.html">Practica 1</a>
-        <a href="p2.html">Practica 2</a>
-        <a href="p3.html">Practica 3</a>
-        <a href="p4.html">Practica 4</a>
-        <a href="p5.html">Practica 3</a>
-        <a href="p6.html">Practica 6</a>
-        <a href="p7.html">Practica 7</a>
-        <a href="p8.html">Practica 8</a>
-        <a href="p9.html">Practica 9</a>
-        <a href="p10.html">Practica 10</a>
-        <a href="p11.html">Practica 11</a>
-        <a href="p12.html">Practica 12a</a>
-        <a href="p13.html">Practica 12b</a>
-        <a href="p14.html">Practica 12c</a>
-        <a href="p15.html">Practica 13</a>
-        <a href="p16.html">Practica 14</a>
-        <a href="p17.html">Practica 14</a>
-        <a href="p18.html">Practica 14</a>
-        <a href="p19.html">Practica 14</a>
-      </nav>
-  
-      <div class="main">
-        <p>Contenido ....</p>
+        <header>
+          <h1>Practicas HTML/CSS 2020</h1>
+          <p class="header__left-side"><strong>Javier Crespo Navarro</strong></p>
+          <h4 class="header__right-side"><strong>1 BAC B</strong></h4>
+        </header>
+        <nav>
+          <a href="p1.html"><strong>Practica 1</strong></a>
+          <a href="p2.html"><strong>Practica 2</strong></a>
+          <a href="p3.html"><strong>Practica 3</strong></a>
+          <a href="p4.html"><strong>Practica 4</strong></a>
+          <a href="p5.html"><strong>Practica 5</strong></a>
+          <a href="p6.html"><strong>Practica 6</strong></a>
+          <a href="p7.html"><strong>Practica 7</strong></a>
+          <a href="p8.html"><strong>Practica 8</strong></a>
+          <a href="p9.html"><strong>Practica 9</strong></a>
+          <a href="p10.html"><strong>Practica 10</strong></a>
+          <a href="p11.html"><strong>Practica 11</strong></a>
+          <a href="p12.html"><strong>Practica 12</strong></a>
+          <a href="p13.html"><strong>Practica 13</strong></a>
+          <a href="p14.html"><strong>Practica 14</strong></a>
+          <a href="p15.html"><strong>Practica 15</strong></a>
+          <a href="p16.html"><strong>Practica 16</strong></a>
+          <a href="p17.html"><strong>Practica 17</strong></a>
+          <a href="p18.html"><strong>Practica 18</strong></a>
+          <a href="p19.html"><strong>Practica 19</strong></a>
+        </nav>
+    
+        <div class="main">
+          <p>Contenido ....</p>
+        </div>
+    
       </div>
-  
-    </div>
-  </body>
+
+
+
+
+</body>
 </html>
